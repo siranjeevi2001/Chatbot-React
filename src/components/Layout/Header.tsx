@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <>
       <header className="w-full bg-white shadow-md">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center gap-2">
+        <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center gap-1">
           
           {/* Logo */}
           <img

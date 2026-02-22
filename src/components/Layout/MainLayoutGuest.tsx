@@ -1,23 +1,58 @@
-import type { ReactNode} from "react";
-
+import type { ReactNode } from "react";
 import Header from "./Header";
-import Footer from "./Footer";
-
+import Sidebar from "../Sidebar/Sidebar";
 
 interface MainLayoutProps {
-    children: ReactNode;
+  children: ReactNode;
 }
 
+// const MainLayoutGuess = ({ children }: MainLayoutProps) => {
+//   return (
+//     <div className="h-screen flex bg-gray-100 overflow-hidden">
+
+//       {/* Sidebar */}
+//       <Sidebar />
+
+//       {/* Right Section */}
+//       <div className="flex flex-col flex-1 ml-72 h-screen">
+
+//         {/* Header */}
+//         <Header />
+
+//         {/* Main Content */}
+//         <main className="flex-1">
+//           {children}
+//         </main>
+
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default MainLayoutGuess;
+
+
 const MainLayoutGuess = ({ children }: MainLayoutProps) => {
-    return (
-        <>
-            <Header/>
-            <main className="pt-16">{children}</main>   
-            <Footer />
-        </>
-    );
+  return (
+    <div className="h-screen flex overflow-hidden">
+
+      {/* Sidebar */}
+      <Sidebar />
+
+      {/* Right Section */}
+      <div className="flex flex-col flex-1 ml-72">
+
+        {/* Header */}
+        <Header />
+
+        {/* Main Content */}
+        <main className="flex-1 overflow-hidden">
+          {children}
+        </main>
+
+      </div>
+    </div>
+  );
 };
 
 export default MainLayoutGuess;
-
-

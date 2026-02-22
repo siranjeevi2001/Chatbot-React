@@ -1,17 +1,8 @@
-// import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
+import { createRoot } from "react-dom/client";
+import "./index.css";
 
-import MainLayoutGuess from './components/Layout/MainLayoutGuest'
-import App from './App.tsx'
-import Container from './components/Layout/Container'
+import App from "./App";
 
-createRoot(document.getElementById('root')!).render(
-<MainLayoutGuess>
-  <Container>
-    <App />
-  </Container>
-  
-</MainLayoutGuess>
-
-)
+createRoot(document.getElementById("root")!).render(
+  <App />
+);
